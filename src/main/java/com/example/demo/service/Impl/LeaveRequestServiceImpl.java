@@ -15,10 +15,14 @@ public class LeaveRequestServiceImpl implements LeaveRequestService {
     }
 
     @Override
-    public void approve(Long id) {}
+    public LeaveRequestDto approve(Long id) {
+        return new LeaveRequestDto();
+    }
 
     @Override
-    public void reject(Long id) {}
+    public LeaveRequestDto reject(Long id) {
+        return new LeaveRequestDto();
+    }
 
     @Override
     public List<LeaveRequestDto> getByEmployee(Long empId) {
