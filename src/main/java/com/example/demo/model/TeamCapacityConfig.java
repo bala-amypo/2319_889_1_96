@@ -11,19 +11,9 @@ public class TeamCapacityConfig {
     private Long id;
 
     private String teamName;
+    private int totalHeadcount;
+    private int minCapacityPercent;
 
-    private int minRequiredEmployees;
-
-    // Constructors
-    public TeamCapacityConfig() {
-    }
-
-    public TeamCapacityConfig(String teamName, int minRequiredEmployees) {
-        this.teamName = teamName;
-        this.minRequiredEmployees = minRequiredEmployees;
-    }
-
-    // Getters & Setters
     public Long getId() {
         return id;
     }
@@ -40,11 +30,19 @@ public class TeamCapacityConfig {
         this.teamName = teamName;
     }
 
-    public int getMinRequiredEmployees() {
-        return minRequiredEmployees;
+    public int getTotalHeadcount() {
+        return totalHeadcount;
     }
 
-    public void setMinRequiredEmployees(int minRequiredEmployees) {
-        this.minRequiredEmployees = minRequiredEmployees;
+    public void setTotalHeadcount(int totalHeadcount) {
+        this.totalHeadcount = totalHeadcount;
+    }
+
+    public int getMinCapacityPercent() {
+        return minCapacityPercent;
+    }
+
+    public void setMinCapacityPercent(int minCapacityPercent) {
+        this.minCapacityPercent = minCapacityPercent;
     }
 }
