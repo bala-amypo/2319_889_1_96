@@ -13,6 +13,11 @@ public class TeamCapacityRuleServiceImpl implements TeamCapacityRuleService {
     }
 
     @Override
+    public TeamCapacityConfig updateRule(Long id, TeamCapacityConfig config) {
+        return config;
+    }
+
+    @Override
     public TeamCapacityConfig getRuleByTeam(String team) {
         return new TeamCapacityConfig();
     }

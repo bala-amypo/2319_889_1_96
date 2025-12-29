@@ -8,9 +8,9 @@ public interface LeaveRequestService {
 
     LeaveRequestDto create(LeaveRequestDto dto);
 
-    void approve(Long id);
+    LeaveRequestDto approve(Long id);
 
-    void reject(Long id);
+    LeaveRequestDto reject(Long id);
 
     List<LeaveRequestDto> getByEmployee(Long empId);
 

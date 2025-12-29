@@ -6,5 +6,8 @@ public interface TeamCapacityRuleService {
 
     TeamCapacityConfig createRule(TeamCapacityConfig config);
 
+    TeamCapacityConfig updateRule(Long id, TeamCapacityConfig config);
+
     TeamCapacityConfig getRuleByTeam(String team);
 }
+
