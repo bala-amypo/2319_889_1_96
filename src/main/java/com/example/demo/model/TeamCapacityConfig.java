@@ -3,73 +3,48 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "team_capacity_configs")
+@Table(name = "team_capacity_config")
 public class TeamCapacityConfig {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
     private String teamName;
 
-    private Integer totalHeadcount;
-    private Integer minCapacityPercent;
+    private int minRequiredEmployees;
 
-    public TeamCapacityConfig() {}
-
-    public TeamCapacityConfig(String teamName, Integer totalHeadcount, Integer minCapacityPercent) {
-        this.teamName = teamName;
-        this.totalHeadcount = totalHeadcount;
-        this.minCapacityPercent = minCapacityPercent;
+    // Constructors
+    public TeamCapacityConfig() {
     }
 
-    // Getters and setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getTeamName() { return teamName; }
-    public void setTeamName(String teamName) { this.teamName = teamName; }
-
-    public Integer getTotalHeadcount() { return totalHeadcount; }
-    public void setTotalHeadcount(Integer totalHeadcount) { this.totalHeadcount = totalHeadcount; }
-
-    public Integer getMinCapacityPercent() { return minCapacityPercent; }
-    public void setMinCapacityPercent(Integer minCapacityPercent) { this.minCapacityPercent = minCapacityPercent; }
-}package com.example.demo.model;
-
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "team_capacity_configs")
-public class TeamCapacityConfig {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(unique = true, nullable = false)
-    private String teamName;
-
-    private Integer totalHeadcount;
-    private Integer minCapacityPercent;
-
-    public TeamCapacityConfig() {}
-
-    public TeamCapacityConfig(String teamName, Integer totalHeadcount, Integer minCapacityPercent) {
+    public TeamCapacityConfig(String teamName, int minRequiredEmployees) {
         this.teamName = teamName;
-        this.totalHeadcount = totalHeadcount;
-        this.minCapacityPercent = minCapacityPercent;
+        this.minRequiredEmployees = minRequiredEmployees;
     }
 
-    // Getters and setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
+    // Getters & Setters
+    public Long getId() {
+        return id;
+    }
 
-    public String getTeamName() { return teamName; }
-    public void setTeamName(String teamName) { this.teamName = teamName; }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public Integer getTotalHeadcount() { return totalHeadcount; }
-    public void setTotalHeadcount(Integer totalHeadcount) { this.totalHeadcount = totalHeadcount; }
+    public String getTeamName() {
+        return teamName;
+    }
 
-    public Integer getMinCapacityPercent() { return minCapacityPercent; }
-    public void setMinCapacityPercent(Integer minCapacityPercent) { this.minCapacityPercent = minCapacityPercent; }
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public int getMinRequiredEmployees() {
+        return minRequiredEmployees;
+    }
+
+    public void setMinRequiredEmployees(int minRequiredEmployees) {
+        this.minRequiredEmployees = minRequiredEmployees;
+    }
 }
