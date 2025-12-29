@@ -4,5 +4,7 @@ import com.example.demo.model.TeamCapacityConfig;
 
 public interface TeamCapacityRuleService {
 
-    TeamCapacityConfig updateRule(Long id, TeamCapacityConfig config);
+    TeamCapacityConfig createRule(TeamCapacityConfig config);
+
+    TeamCapacityConfig getRuleByTeam(String team);
 }
